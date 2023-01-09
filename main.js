@@ -19,9 +19,16 @@ var x = setInterval(function() {
 }, 1000);
 
 // number copy function
-let copy = document.getElementById("copyfunc");
-copy.addEventListener('click', (id) => {
-    var str = document.getElementById("copy");
+let copytbc = document.getElementById("copytbcfunc");
+copytbc.addEventListener('click', (id) => {
+    var str = document.getElementById("copytbc");
+    window.getSelection().selectAllChildren(str);
+    document.execCommand("Copy");
+});
+
+let copygeo = document.getElementById("copygeofunc");
+copygeo.addEventListener('click', (id) => {
+    var str = document.getElementById("copygeo");
     window.getSelection().selectAllChildren(str);
     document.execCommand("Copy");
 });
